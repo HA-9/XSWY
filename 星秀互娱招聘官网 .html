@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>星秀互娱 · 招聘官网｜星辰大海，秀出未来</title>
+<meta name="description" content="星秀互娱，昆明 3500㎡ 独栋直播人才孵化基地。九个岗位开放招聘：团播、个播、带货主播、AI创作、摄影、运营、主持、化妆师、舞蹈老师。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230C0A08'/%3E%3Cpath d='M16 4l3.2 8.4 9 .5-6.9 5.6 2.4 8.5-7.7-4.6-7.7 4.6 2.4-8.5L3.8 12.9l9-.5z' fill='%23C79A4F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="preconnect" href="https://sf3-scmcdn-cn.feishucdn.com" crossorigin>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@700;900&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap">
+<style>
+:root{
+  --ink:#0C0A08;
+  --ink-2:#131010;
+  --ink-3:#1D1814;
+  --paper:#F1E9D8;
+  --paper-2:#E4D9C2;
+  --gold:#C79A4F;
+  --gold-2:#E6C68A;
+  --gold-dim:#8C6F3C;
+  --rose:#C9435A;
+  --line-d:rgba(230,198,138,.20);
+  --line-p:rgba(36,30,24,.16);
+  --txt-d:#E7DFD0;
+  --txt-dm:#A09584;
+  --txt-p:#241E18;
+  --txt-pm:#6B6053;
+  --serif:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --nav-h:72px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--ink);color:var(--txt-d);
+  font-family:var(--sans);font-size:16px;line-height:1.8;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+h1,h2,h3,h4{margin:0;font-family:var(--serif);font-weight:900;letter-spacing:.01em;line-height:1.22}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+ul{margin:0;padding:0;list-style:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--gold);color:#141010}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+@media (min-width:900px){.wrap{width:min(1240px,100% - 96px)}}
+
+/* 纸纹颗粒：全站一层，避免纯平底 */
+.grain{
+  position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.055;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+  mix-blend-mode:overlay;
+}
+
+/* ===== 导航 ===== */
+.nav{position:fixed;inset:0 0 auto;z-index:50;height:var(--nav-h);display:flex;align-items:center;transition:background .4s var(--ease),border-color .4s}
+.nav.is-solid{background:rgba(12,10,8,.96);border-bottom:1px solid var(--line-d)}
+.nav-inner{display:flex;align-items:center;gap:20px;width:min(1240px,100% - 40px);margin-inline:auto}
+@media (min-width:900px){.nav-inner{width:min(1240px,100% - 96px)}}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand svg{width:26px;height:26px;color:var(--gold)}
+.brand-txt{font-family:var(--serif);font-weight:900;font-size:19px;letter-spacing:.06em;color:#F3ECDD}
+.brand-en{display:none;font-family:var(--sans);font-size:10px;letter-spacing:.28em;color:var(--txt-dm);margin-left:2px}
+@media (min-width:1100px){.brand-en{display:inline-block}}
+.nav-links{display:none;margin-left:auto;gap:26px;font-size:14px;color:var(--txt-d)}
+@media (min-width:900px){.nav-links{display:flex}}
+.nav-links a{padding:6px 0;position:relative;opacity:.82;transition:opacity .2s}
+.nav-links a:hover,.nav-links a.is-active{opacity:1}
+.nav-links a.is-active::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold)}
+.nav .nav-cta{display:none}
+@media (min-width:900px){.nav .nav-cta{display:inline-flex;margin-left:8px}}
+.menu-btn{display:inline-flex;align-items:center;justify-content:center;margin-left:auto;width:44px;height:44px;border:1px solid var(--line-d);color:var(--txt-d)}
+@media (min-width:900px){.menu-btn{display:none}}
+.menu-btn svg{width:18px;height:18px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;font-size:15px;letter-spacing:.02em;border:1px solid transparent;transition:transform .3s var(--ease),background .3s,color .3s,border-color .3s}
+.btn:active{transform:translateY(1px)}
+.btn-gold{background:var(--gold);color:#15100A;border-color:var(--gold)}
+.btn-gold:hover{background:var(--gold-2);border-color:var(--gold-2)}
+.btn-ghost{border-color:rgba(231,223,208,.38);color:var(--txt-d)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-2)}
+.btn-ink{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn-ink:hover{background:var(--ink-3);border-color:var(--ink-3);color:#fff}
+.btn svg{width:16px;height:16px;flex:0 0 auto}
+
+/* 移动端菜单 */
+.drawer{position:fixed;inset:0;z-index:70;background:var(--ink);display:flex;flex-direction:column;padding:24px 20px 32px;transform:translateY(-100%);transition:transform .5s var(--ease);visibility:hidden}
+.drawer.is-open{transform:none;visibility:visible}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+.drawer-close{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line-d)}
+.drawer-close svg{width:18px;height:18px}
+.drawer nav{display:flex;flex-direction:column;gap:6px}
+.drawer nav a{display:flex;align-items:baseline;gap:14px;padding:14px 0;border-bottom:1px solid var(--line-d);font-family:var(--serif);font-size:22px;font-weight:700}
+.drawer nav a i{font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.18em;color:var(--gold);width:22px}
+.drawer-foot{margin-top:auto;padding-top:24px;font-size:14px;color:var(--txt-dm)}
+.drawer-foot b{display:block;font-family:var(--sans);color:var(--txt-d);font-size:15px;letter-spacing:.02em}
+
+/* ===== 首屏 ===== */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--ink)}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:saturate(.94) contrast(1.02);animation:heroPush 16s ease-out both}
+@keyframes heroPush{from{transform:scale(1.09)}to{transform:scale(1)}}
+.hero-grade{position:absolute;inset:0;background:
+  linear-gradient(100deg,rgba(9,7,6,.94) 0%,rgba(9,7,6,.78) 38%,rgba(9,7,6,.34) 66%,rgba(9,7,6,.62) 100%),
+  radial-gradient(120% 80% at 78% 12%,rgba(201,67,90,.18),transparent 60%),
+  linear-gradient(to top,var(--ink) 2%,rgba(12,10,8,.55) 26%,transparent 62%)}
+.hero-rail{display:none}
+@media (min-width:1000px){
+  .hero-rail{display:block;position:absolute;right:34px;top:calc(var(--nav-h) + 46px);writing-mode:vertical-rl;font-size:11px;letter-spacing:.42em;color:rgba(231,223,208,.5);z-index:3}
+}
+.hero-inner{position:relative;z-index:3;padding-top:calc(var(--nav-h) + 40px);padding-bottom:0;width:min(1240px,100% - 40px);margin-inline:auto}
+@media (min-width:900px){.hero-inner{width:min(1240px,100% - 96px);padding-top:calc(var(--nav-h) + 72px)}}
+.hero-kick{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.14em;color:var(--gold-2);margin-bottom:22px}
+.hero-kick span{width:26px;height:1px;background:var(--gold);display:inline-block}
+.hero-title{font-size:clamp(42px,11.6vw,116px);line-height:1.03;letter-spacing:.02em;color:#FBF6EC;margin:0 0 6px}
+.hero-title span{display:block}
+.hero-title .outline{
+  color:transparent;-webkit-text-stroke:1.4px rgba(230,198,138,.82);
+  text-shadow:none;
+}
+@media (min-width:900px){.hero-title .outline{-webkit-text-stroke:2px rgba(230,198,138,.86)}}
+.hero-sub{font-family:var(--serif);font-weight:700;font-size:clamp(16px,2.2vw,22px);color:#EDE3CF;letter-spacing:.06em;margin-top:18px}
+.hero-lead{max-width:44ch;margin-top:18px;font-size:15px;line-height:1.9;color:#D3C8B5}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-stats{position:relative;z-index:3;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:52px;border-top:1px solid var(--line-d);background:var(--line-d)}
+@media (min-width:760px){.hero-stats{grid-template-columns:repeat(4,1fr);margin-top:72px}}
+.hero-stats div{background:rgba(12,10,8,.9);padding:18px 16px 20px}
+@media (min-width:900px){.hero-stats div{padding:22px 24px 26px}}
+.hero-stats b{display:block;font-family:var(--sans);font-weight:700;font-size:clamp(24px,3.2vw,36px);letter-spacing:-.01em;color:#F5EDDD;font-variant-numeric:tabular-nums}
+.hero-stats b em{font-style:normal;font-size:.5em;margin-left:2px;color:var(--gold-2);letter-spacing:0}
+.hero-stats small{display:block;margin-top:6px;font-size:12px;color:var(--txt-dm);letter-spacing:.06em}
+
+/* ===== 通用区块 ===== */
+.sec{padding:76px 0;position:relative}
+@media (min-width:900px){.sec{padding:120px 0}}
+.sec--paper{background:var(--paper);color:var(--txt-p)}
+.sec--paper2{background:var(--paper-2);color:var(--txt-p)}
+.sec--ink2{background:var(--ink-2)}
+.sec-head{display:flex;gap:18px;align-items:flex-start;margin-bottom:40px}
+@media (min-width:900px){.sec-head{gap:28px;margin-bottom:64px}}
+.rail{flex:0 0 auto;display:flex;align-items:flex-start;gap:12px;padding-top:2px}
+.rail-line{width:1px;height:34px;background:var(--gold);opacity:.7}
+.sec--paper .rail-line,.sec--paper2 .rail-line{background:var(--gold-dim);opacity:.55}
+.rail-tag{display:none;font-size:11px;letter-spacing:.2em;line-height:1.35;color:var(--gold-2);writing-mode:vertical-rl;white-space:nowrap}
+.sec--paper .rail-tag,.sec--paper2 .rail-tag{color:var(--gold-dim)}
+@media (min-width:900px){.rail-line{height:52px}.rail-tag{display:block}}
+.rail-inline{display:block;font-size:11px;letter-spacing:.3em;color:var(--gold-2);margin-bottom:10px}
+.sec--paper .rail-inline,.sec--paper2 .rail-inline{color:var(--gold-dim)}
+@media (min-width:900px){.rail-inline{display:none}}
+.head-main{min-width:0}
+.sec-title{font-size:clamp(30px,4.6vw,58px);letter-spacing:.02em}
+.sec--paper .sec-title,.sec--paper2 .sec-title{color:#1B1611}
+.sec-title .accent{color:var(--gold-2)}
+.sec--paper .sec-title .accent,.sec--paper2 .sec-title .accent{color:#9A6B25}
+.sec-sub{margin-top:16px;max-width:56ch;font-size:15px;line-height:1.95;color:var(--txt-dm)}
+.sec--paper .sec-sub,.sec--paper2 .sec-sub{color:var(--txt-pm)}
+.rule{height:1px;background:var(--line-d);margin:0}
+.sec--paper .rule,.sec--paper2 .rule{background:var(--line-p)}
+
+/* 滚动揭示（仅标题与图组，一次） */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-media img{animation:none}}
+
+/* ===== 关于 ===== */
+.about-grid{display:grid;gap:32px}
+@media (min-width:960px){.about-grid{grid-template-columns:1.02fr .98fr;gap:56px;align-items:start}}
+.about-copy p{font-size:15.5px;line-height:2;color:var(--txt-p)}
+.about-copy p+p{margin-top:16px}
+.about-copy .drop{font-family:var(--serif);font-weight:900;font-size:19px;line-height:1.9;color:#1B1611}
+.about-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px;padding-top:26px;border-top:1px solid var(--line-p)}
+.about-facts b{display:block;font-family:var(--sans);font-weight:700;font-size:clamp(20px,2.6vw,28px);color:#1B1611;font-variant-numeric:tabular-nums}
+.about-facts b em{font-style:normal;font-size:.55em;color:#9A6B25}
+.about-facts small{display:block;margin-top:4px;font-size:12px;line-height:1.6;color:var(--txt-pm)}
+.about-media{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.about-media figure{margin:0;position:relative;overflow:hidden;background:#CFC4AE;aspect-ratio:4/5}
+.about-media figure:first-child{grid-column:1 / -1;aspect-ratio:16/10}
+.about-media figure img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.about-media figure:hover img{transform:scale(1.03)}
+.about-media figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 12px;font-size:11.5px;letter-spacing:.1em;color:#F6EFE1;background:linear-gradient(to top,rgba(10,8,7,.7),transparent)}
+.addr{display:flex;gap:10px;align-items:flex-start;margin-top:24px;font-size:13.5px;line-height:1.8;color:var(--txt-pm)}
+.addr svg{width:16px;height:16px;flex:0 0 auto;margin-top:4px;color:#9A6B25}
+
+/* 创始人 */
+.leaders{display:grid;gap:16px;margin-top:44px}
+@media (min-width:760px){.leaders{grid-template-columns:1fr 1fr;gap:24px}}
+.leader{display:grid;grid-template-columns:120px 1fr;min-height:172px;background:rgba(255,255,255,.28);border:1px solid var(--line-p)}
+@media (min-width:520px){.leader{grid-template-columns:150px 1fr;min-height:210px}}
+.leader img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4}
+.leader-body{padding:16px 18px;min-width:0}
+.leader-role{font-size:11px;letter-spacing:.22em;color:#9A6B25}
+.leader-name{font-family:var(--serif);font-weight:900;font-size:24px;color:#1B1611;margin-top:6px;letter-spacing:.14em}
+.leader-quote{margin-top:10px;font-size:13.5px;line-height:1.85;color:var(--txt-pm)}
+
+/* 价值观 */
+.values{margin-top:52px;border-top:1px solid var(--line-p)}
+.values h4{font-size:13px;letter-spacing:.22em;font-weight:700;color:#9A6B25;padding:20px 0 8px;font-family:var(--sans)}
+.value-row{display:grid;grid-template-columns:1fr;gap:2px;padding:16px 0;border-bottom:1px solid var(--line-p)}
+@media (min-width:760px){.value-row{grid-template-columns:180px 1fr;gap:24px;align-items:baseline;padding:20px 0}}
+.value-k{font-family:var(--serif);font-weight:700;font-size:17px;color:#1B1611;letter-spacing:.06em}
+.value-v{font-size:13.5px;line-height:1.85;color:var(--txt-pm)}
+
+/* ===== 空间 ===== */
+/* ===== 空间模块样式 ===== */
+/* 顶部空间容器：网格布局，底部留间距 */
+.space-top{
+  display:grid;
+  gap:26px;
+  align-items:end;
+  margin-bottom:34px
+}
+/* 大屏900px以上：改成两栏布局，调整间距 */
+@media (min-width:900px){
+  .space-top{
+    grid-template-columns:1fr auto;
+    gap:48px;
+    margin-bottom:48px
+  }
+}
+
+/* 大数字文字样式（统计数字） */
+.big-num{
+  font-family:var(--sans);
+  font-weight:700;
+  letter-spacing:-.03em;
+  line-height:1;
+  color:#F5EDDD;
+  font-variant-numeric:tabular-nums /* 等宽数字，数字对齐好看 */
+}
+/* 大号数字主体 */
+.big-num span{
+  font-size:clamp(54px,9vw,104px) /* 响应式字号：最小54px，最大104px，随视口缩放 */
+}
+/* 数字后面附带小字标注 */
+.big-num em{
+  font-style:normal;
+  font-size:clamp(18px,2.4vw,26px);
+  color:var(--gold-2);
+  margin-left:8px;
+  letter-spacing:.04em
+}
+/* 数字下方说明文字 */
+.big-num small{
+  display:block;
+  margin-top:10px;
+  font-size:12.5px;
+  letter-spacing:.1em;
+  color:var(--txt-dm)
+}
+
+/* 标签容器，弹性自动换行 */
+.zones{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px
+}
+/* 大屏：标签靠右，限制最大宽度 */
+@media (min-width:900px){
+  .zones{
+    justify-content:flex-end;
+    max-width:520px
+  }
+}
+/* 单个标签样式 */
+.zone{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border:1px solid var(--line-d);
+  font-size:12.5px;
+  color:#D6CBB8;
+  background:rgba(255,255,255,.02)
+}
+/* 标签前面小圆点 */
+.zone i{
+  width:4px;
+  height:4px;
+  background:var(--gold);
+  display:block;
+  flex:0 0 auto
+}
+
+/* ===================== 图片画廊网格 ===================== */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr); /* 移动端2列 */
+  gap:10px;
+  grid-auto-rows:150px /* 移动端默认行高 */
+}
+/* 760px以上大屏：12栏网格 */
+@media (min-width:760px){
+  .gallery{
+    grid-template-columns:repeat(12,1fr);
+    gap:14px;
+    grid-auto-rows:290px
+  }
+}
+/* 画廊里每一个图容器 */
+.gallery figure{
+  position:relative;
+  margin:0;
+  overflow:hidden; /* 超出部分隐藏，缩放不会溢出 */
+  background:#181310
+}
+/* 画廊图片：铺满容器，裁切适配 */
+.gallery figure img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .9s var(--ease) /* hover动画过渡 */
+}
+/* 鼠标悬浮图片轻微放大 */
+.gallery figure:hover img{
+  transform:scale(1.04)
+}
+/* 图片底部文字说明浮层 */
+.gallery figcaption{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:8px;
+  padding:36px 12px 10px;
+  background:linear-gradient(to top,rgba(8,7,6,.82),rgba(8,7,6,.12) 60%,transparent);
+  font-size:12px;
+  color:#F1E8D6;
+  letter-spacing:.06em
+}
+/* 浮层里金色小字 */
+.gallery figcaption span{
+  font-size:10.5px;
+  letter-spacing:.16em;
+  color:var(--gold-2)
+}
+
+/* 画廊不同占宽类：移动端 */
+.g-hero{grid-column:span 2}
+.g-wide{grid-column:span 2}
+.g-tall{grid-column:span 1}
+.g-land{grid-column:span 1}
+/* 大屏下网格跨列占比 */
+@media (min-width:760px){
+  .g-hero{grid-column:span 6}    /* 大图跨6格 */
+  .g-tall{grid-column:span 3}    /* 竖图跨3格 */
+  .g-land{grid-column:span 4}   /* 横图跨4格 */
+  .g-wide{grid-column:span 4}    /* 宽图跨4格 */
+}
+
+/* ===================== 全景长图模块（pano全景） ===================== */
+.pano{
+  margin-top:14px;
+  position:relative;
+  overflow:hidden;
+  background:#181310 /* 底色，图片空白区域显示深色背景，和网站风格统一 */
+}
+/* 全景图：完整显示整张图，不裁切、不变形 */
+.pano img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+/* 全景图底部文字浮层 */
+.pano-cap{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:34px 14px 12px;
+  margin:0;
+  font-size:11.5px;
+  letter-spacing:.04em;
+  color:#EFE6D3;
+  background:linear-gradient(to top,rgba(8,7,6,.82),transparent)
+}
+/* 手机端适配，保留contain完整显示，不再固定比例裁切 */
+@media (max-width:759px){
+  .pano img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+  }
+}
+
+/* ===== 岗位 ===== */
+.jobs-top{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-bottom:24px}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border:1px solid var(--line-d);font-size:13px;color:#CFC4B0;transition:background .25s,color .25s,border-color .25s}
+.chip i{font-style:normal;font-size:11px;color:var(--gold);font-variant-numeric:tabular-nums}
+.chip:hover{border-color:var(--gold)}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#16100A}
+.chip[aria-pressed="true"] i{color:#16100A}
+.count{font-size:12px;letter-spacing:.1em;color:var(--txt-dm);font-variant-numeric:tabular-nums}
+.jobs{display:grid;gap:14px}
+@media (min-width:700px){.jobs{grid-template-columns:repeat(2,1fr);gap:16px}}
+@media (min-width:1100px){.jobs{grid-template-columns:repeat(3,1fr);gap:18px}}
+.job{position:relative;display:flex;flex-direction:column;padding:22px 22px 18px;border:1px solid var(--line-d);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0));transition:border-color .3s,background .3s}
+.job:hover{border-color:rgba(199,154,79,.55)}
+.job.is-hide{display:none}
+.job-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.job-idx{font-size:10.5px;letter-spacing:.16em;color:var(--gold);font-variant-numeric:tabular-nums}
+.job-name{font-family:var(--serif);font-weight:900;font-size:22px;line-height:1.3;color:#F6EEDF;margin-top:4px}
+.job-tag{padding:4px 9px;font-size:11px;letter-spacing:.08em;border:1px solid var(--line-d);color:var(--gold-2);white-space:nowrap}
+.job-one{margin-top:12px;font-size:13.5px;line-height:1.85;color:#BFB4A2;min-height:3em}
+.job-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.job-tags span{font-size:11.5px;color:#A99D8A;border-bottom:1px solid rgba(230,198,138,.28);padding-bottom:1px}
+.job-foot{margin-top:auto;padding-top:16px;display:flex;align-items:flex-end;justify-content:space-between;gap:10px;border-top:1px solid var(--line-d)}
+.job-one{margin-bottom:18px}
+.pay small{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--txt-dm)}
+.pay b{display:block;margin-top:2px;font-family:var(--sans);font-weight:700;font-size:17px;color:#E8C88A;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.pay b i{font-style:normal;font-size:10px;color:var(--txt-dm);margin-left:4px;letter-spacing:.06em}
+.job-toggle{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 4px;font-size:12.5px;color:#D6CBB8}
+.job-toggle:hover{color:var(--gold-2)}
+.job-toggle svg{width:14px;height:14px;transition:transform .35s var(--ease)}
+.job-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+.job-detail{overflow:hidden;max-height:0;transition:max-height .45s var(--ease),opacity .35s;opacity:0}
+.job-detail.is-open{max-height:900px;opacity:1}
+.jd-block{margin-top:14px}
+.jd-block h5{margin:0 0 6px;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--gold-2)}
+.jd-block li{position:relative;padding-left:12px;font-size:12.8px;line-height:1.8;color:#B9AE9C}
+.jd-block li::before{content:"";position:absolute;left:0;top:.72em;width:4px;height:1px;background:var(--gold-dim)}
+.jobs-note{margin-top:26px;font-size:12.5px;line-height:1.9;color:var(--txt-dm);border-left:2px solid var(--gold);padding-left:14px}
+
+/* 岗位匹配 */
+.matcher{margin-top:56px;border:1px solid var(--line-d);padding:24px}
+@media (min-width:900px){.matcher{padding:36px 40px}}
+.matcher h4{font-family:var(--serif);font-size:22px;font-weight:900;color:#F4ECDD;margin-bottom:6px}
+.matcher .m-sub{font-size:13px;color:var(--txt-dm)}
+.m-q{margin-top:22px}
+.m-q p{font-size:14px;color:#DCD1BE;margin-bottom:10px}
+.m-q p b{color:var(--gold-2);font-weight:700;margin-right:8px;font-variant-numeric:tabular-nums}
+.m-opts{display:flex;flex-wrap:wrap;gap:8px}
+.m-opt{min-height:42px;padding:0 16px;border:1px solid var(--line-d);font-size:13.5px;color:#C9BEAA;transition:.25s}
+.m-opt:hover{border-color:var(--gold);color:var(--gold-2)}
+.m-opt[aria-pressed="true"]{background:rgba(199,154,79,.16);border-color:var(--gold);color:#F6EEDF}
+.m-result{margin-top:24px;padding-top:20px;border-top:1px solid var(--line-d);display:none}
+.m-result.is-on{display:block}
+.m-result .m-tier{font-size:11px;letter-spacing:.2em;color:var(--gold)}
+.m-result .m-names{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+.m-result .m-names a{display:inline-flex;align-items:baseline;gap:8px;padding:10px 16px;background:rgba(199,154,79,.12);border:1px solid rgba(199,154,79,.34);font-family:var(--serif);font-weight:700;font-size:17px;color:#F6EEDF}
+.m-result .m-names a em{font-style:normal;font-family:var(--sans);font-size:11px;color:var(--gold-2);font-variant-numeric:tabular-nums}
+.m-result .m-note{margin-top:12px;font-size:12.5px;color:var(--txt-dm);line-height:1.8}
+
+/* ===== 薪资 ===== */
+.pay-grid{display:grid;gap:36px}
+@media (min-width:1000px){.pay-grid{grid-template-columns:1.05fr 1fr;gap:64px;align-items:start}}
+.pay-lead{font-family:var(--sans);font-weight:700;font-size:clamp(48px,8vw,86px);line-height:1;letter-spacing:-.03em;color:#F5EDDD;font-variant-numeric:tabular-nums}
+.pay-lead em{font-style:normal;font-size:.34em;color:var(--gold-2);margin-left:6px;letter-spacing:.04em}
+.pay-cap{margin-top:12px;font-size:13px;letter-spacing:.04em;color:var(--txt-dm)}
+.pay-cap b{color:#DCD1BE;font-weight:500}
+.bars{margin-top:28px;display:grid;gap:14px}
+.bar-row{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:baseline}
+.bar-row .bl{font-size:12.5px;color:#BFB4A2}
+.bar-row .bv{font-family:var(--sans);font-size:14px;font-weight:700;color:#E8C88A;font-variant-numeric:tabular-nums}
+.bar-row .bt{grid-column:1 / -1;height:6px;background:rgba(255,255,255,.07);position:relative;overflow:hidden}
+.bar-row .bt i{position:absolute;inset:0 auto 0 0;width:var(--w,0);background:var(--gold);display:block}
+.bar-row.is-dim .bt i{background:rgba(199,154,79,.5)}
+.bar-row.is-hot .bt i{background:linear-gradient(90deg,var(--gold-dim),var(--gold-2))}
+.pay-side{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-d);border:1px solid var(--line-d)}
+.pay-side div{background:var(--ink-2);padding:18px 16px}
+.pay-side b{display:block;font-family:var(--sans);font-weight:700;font-size:clamp(24px,3vw,32px);color:#F5EDDD;font-variant-numeric:tabular-nums;line-height:1.2}
+.pay-side b em{font-style:normal;font-size:.6em;color:var(--gold-2)}
+.pay-side small{display:block;margin-top:8px;font-size:12px;line-height:1.7;color:var(--txt-dm)}
+.pay-nums{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line-d);border:1px solid var(--line-d);margin-top:1px}
+.pay-nums div:last-child{grid-column:1 / -1}
+@media (min-width:760px){.pay-nums{grid-template-columns:repeat(3,1fr)}.pay-nums div:last-child{grid-column:auto}}
+.pay-nums div{background:var(--ink-2);padding:18px 16px}
+.pay-nums b{display:block;font-family:var(--sans);font-weight:700;font-size:clamp(22px,2.8vw,30px);color:#F5EDDD;font-variant-numeric:tabular-nums}
+.pay-nums b em{font-style:normal;font-size:.55em;color:var(--gold-2)}
+.pay-nums small{display:block;margin-top:6px;font-size:12px;color:var(--txt-dm);line-height:1.7}
+.tbl-wrap{margin-top:52px;overflow-x:auto}
+.salary-tbl{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px;min-width:560px}
+.salary-tbl col{width:30%}
+.salary-tbl th:nth-child(2){width:26%}
+.salary-tbl th:nth-child(3){width:44%}
+.salary-tbl thead th{text-align:left;padding:12px 12px 10px;font-family:var(--sans);font-weight:700;font-size:11.5px;letter-spacing:.16em;color:var(--gold-2);border-bottom:1px solid var(--line-d)}
+.salary-tbl tbody td{padding:13px 12px;border-bottom:1px solid rgba(230,198,138,.12);color:#C6BBA9;vertical-align:middle}
+.salary-tbl tbody td:first-child{color:#F2E9D8;font-weight:500}
+.salary-tbl tbody td:nth-child(2){font-variant-numeric:tabular-nums;color:#E8C88A}
+.salary-tbl td span{font-size:11.5px;color:var(--txt-dm)}
+
+/* ===== 成长 ===== */
+.growth-grid{display:grid;gap:40px}
+@media (min-width:1000px){.growth-grid{grid-template-columns:1.15fr .85fr;gap:64px}}
+.tl{margin-top:8px}
+.tl-row{display:grid;grid-template-columns:26px 1fr;column-gap:14px;align-items:start}
+@media (min-width:900px){.tl-row{grid-template-columns:106px 24px 1fr;column-gap:0}}
+.tl-when{display:none}
+@media (min-width:900px){.tl-when{display:block;padding:2px 16px 0 0;text-align:right;font-size:12px;letter-spacing:.08em;color:#9A6B25;font-variant-numeric:tabular-nums}}
+.tl-axis{position:relative;height:100%;min-height:78px;display:flex;justify-content:center}
+.tl-axis::before{content:"";width:1px;height:100%;background:var(--line-p)}
+.tl-dot{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:9px;height:9px;background:#9A6B25;border-radius:50%;z-index:1}
+.tl-row:first-child .tl-dot{width:11px;height:11px;top:5px;background:#1B1611;box-shadow:0 0 0 3px rgba(199,154,79,.5)}
+.tl-axis::before{background:rgba(36,30,24,.22)}
+.tl-body{padding:0 0 26px}
+@media (min-width:900px){.tl-body{padding:0 0 34px 26px}}
+.tl-body h5{margin:0;font-family:var(--serif);font-size:18px;font-weight:900;color:#1B1611;letter-spacing:.04em}
+.tl-body .tl-when-m{font-size:11px;letter-spacing:.14em;color:#9A6B25;margin-bottom:2px;display:block}
+@media (min-width:900px){.tl-body .tl-when-m{display:none}}
+.tl-body p{margin-top:6px;font-size:13px;line-height:1.85;color:var(--txt-pm)}
+.tracks{display:grid;gap:12px;margin-top:24px}
+@media (min-width:640px){.tracks{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1000px){.tracks{grid-template-columns:1fr}}
+.track{border-top:2px solid #1B1611;padding:12px 0 4px}
+.track b{display:block;font-family:var(--serif);font-size:16px;font-weight:900;color:#1B1611}
+.track span{display:block;margin-top:4px;font-size:12px;line-height:1.8;color:var(--txt-pm)}
+.perks{margin-top:56px;border-top:1px solid var(--line-p);padding-top:28px}
+.perks h4{font-family:var(--serif);font-size:20px;font-weight:900;color:#1B1611;margin-bottom:18px}
+.perk-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-p);border:1px solid var(--line-p)}
+@media (min-width:760px){.perk-grid{grid-template-columns:repeat(4,1fr)}}
+.perk{background:var(--paper);padding:18px 16px 20px}
+.perk svg{width:22px;height:22px;color:#9A6B25;margin-bottom:10px}
+.perk b{display:block;font-size:13.5px;color:#1B1611;letter-spacing:.04em}
+.perk small{display:block;margin-top:6px;font-size:12px;line-height:1.8;color:var(--txt-pm)}
+
+/* ===== 校企合作 ===== */
+.coop-grid{display:grid;gap:32px}
+@media (min-width:1000px){.coop-grid{grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}}
+.modes{display:grid;gap:1px;background:var(--line-p);border:1px solid var(--line-p);grid-template-columns:1fr 1fr}
+@media (min-width:760px){.modes{grid-template-columns:repeat(3,1fr)}}
+.mode{background:var(--paper-2);padding:18px 16px}
+.mode b{display:block;font-family:var(--serif);font-size:16px;font-weight:900;color:#1B1611;letter-spacing:.06em}
+.mode small{display:block;margin-top:6px;font-size:12px;line-height:1.75;color:var(--txt-pm)}
+.coop-steps{display:grid;gap:10px;margin-top:22px}
+.coop-step{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;padding:12px 14px;border:1px solid var(--line-p);background:rgba(255,255,255,.35)}
+.coop-step i{font-family:var(--sans);font-style:normal;font-weight:700;font-size:12px;color:#9A6B25;border:1px solid rgba(154,107,37,.5);width:26px;height:26px;display:grid;place-items:center}
+.coop-step b{display:block;font-size:14px;color:#1B1611}
+.coop-step small{display:block;font-size:12px;line-height:1.7;color:var(--txt-pm);margin-top:2px}
+.coop-stats{display:grid;gap:1px;background:var(--line-p);border:1px solid var(--line-p);margin-top:26px}
+.coop-stats div{background:rgba(255,255,255,.4);padding:16px}
+.coop-stats b{font-family:var(--sans);font-weight:700;font-size:26px;color:#1B1611;font-variant-numeric:tabular-nums}
+.coop-stats b em{font-style:normal;font-size:.55em;color:#9A6B25}
+.coop-stats small{display:block;margin-top:4px;font-size:12px;color:var(--txt-pm);line-height:1.7}
+
+/* ===== 流程 ===== */
+.flow{display:grid;gap:14px;margin-top:8px}
+@media (min-width:760px){.flow{grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line-d);border:1px solid var(--line-d)}}
+.flow-step{background:var(--ink);padding:20px 16px;position:relative}
+.flow-step i{font-family:var(--sans);font-style:normal;font-size:10.5px;letter-spacing:.18em;color:var(--gold)}
+.flow-step b{display:block;margin-top:8px;font-family:var(--serif);font-size:17px;font-weight:900;color:#F4ECDD;letter-spacing:.04em}
+.flow-step small{display:block;margin-top:6px;font-size:12px;line-height:1.75;color:var(--txt-dm)}
+
+/* ===== 联系 ===== */
+.contact{position:relative;overflow:hidden}
+.contact-bg{position:absolute;inset:0}
+.contact-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.contact-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(9,7,6,.95),rgba(9,7,6,.6) 55%,rgba(9,7,6,.86))}
+.contact-inner{position:relative;z-index:2;display:grid;gap:36px;padding:88px 0}
+@media (min-width:900px){.contact-inner{grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;padding:120px 0}}
+.contact-title{font-size:clamp(30px,5vw,62px);color:#FBF4E8;line-height:1.16}
+.contact-title span{display:block}
+.contact-title .thin{color:transparent;-webkit-text-stroke:1.2px rgba(230,198,138,.7);font-weight:700}
+.contact-lead{margin-top:16px;max-width:46ch;font-size:15px;line-height:1.95;color:#CFC3AF}
+.contact-rows{margin-top:28px;display:grid;gap:10px}
+.c-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 0;border-top:1px solid var(--line-d)}
+.c-row .c-k{font-size:11px;letter-spacing:.2em;color:var(--gold-2);width:64px;flex:0 0 auto}
+.c-row .c-v{font-family:var(--sans);font-size:clamp(17px,2.2vw,21px);letter-spacing:.04em;color:#F6EEDF;font-variant-numeric:tabular-nums}
+.c-row button{min-height:40px;padding:0 14px;border:1px solid var(--line-d);font-size:12px;color:#D6CBB8;transition:.25s}
+.c-row button:hover{border-color:var(--gold);color:var(--gold-2)}
+.qr-card{justify-self:start;background:var(--paper);padding:14px;max-width:224px;border:1px solid rgba(199,154,79,.4)}
+.qr-card img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.qr-card p{margin-top:8px;font-size:11.5px;letter-spacing:.06em;color:var(--txt-pm);text-align:center}
+
+/* ===== 页脚 ===== */
+.footer{background:#080706;border-top:1px solid var(--line-d);padding:40px 0 28px}
+.foot-top{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-start;padding-bottom:24px;border-bottom:1px solid var(--line-d)}
+.foot-brand{display:flex;align-items:center;gap:10px}
+.foot-brand svg{width:24px;height:24px;color:var(--gold)}
+.foot-brand b{font-family:var(--serif);font-size:18px;font-weight:900;letter-spacing:.08em;color:#EFE6D4}
+.foot-brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.22em;color:var(--txt-dm)}
+.foot-links{display:flex;flex-wrap:wrap;gap:18px;font-size:12.5px;color:var(--txt-dm)}
+.foot-links a:hover{color:var(--gold-2)}
+.foot-bot{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;margin-top:20px;font-size:11.5px;line-height:1.9;color:#7C7368}
+.foot-note{max-width:62ch}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:32px;z-index:80;transform:translate(-50%,18px);opacity:0;pointer-events:none;background:var(--gold);color:#15100A;padding:12px 20px;font-size:13.5px;border-radius:2px;transition:opacity .3s,transform .3s var(--ease);max-width:calc(100% - 40px)}
+.toast.is-on{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<!-- ===== 导航 ===== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="星秀互娱 首页">
+      <img src="img/XSlogo.png" alt="星秀互娱"
+	  class="logo-png"
+	  style="width: 100px;">
+      <span class="brand-txt">星秀互娱</span>
+      <span class="brand-en">XINGXIU MEDIA</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">关于星秀</a>
+      <a href="#space">基地</a>
+      <a href="#jobs">岗位</a>
+      <a href="#salary">薪资</a>
+      <a href="#grow">成长</a>
+      <a href="#coop">校企合作</a>
+      <a href="#contact">联系</a>
+    </nav>
+    <a class="btn btn-gold nav-cta" href="#jobs">查看开放岗位</a>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false" aria-controls="drawer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="brand">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6 7 .4-5.4 4.4 1.9 6.7L12 16.3 5.9 20.1l1.9-6.7L2.4 9l7-.4z"/></svg>
+      <span class="brand-txt">星秀互娱</span>
+    </span>
+    <button class="drawer-close" id="drawerClose" aria-label="关闭菜单">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="#about"><i>01</i>关于星秀</a>
+    <a href="#space"><i>02</i>基地空间</a>
+    <a href="#jobs"><i>03</i>开放岗位</a>
+    <a href="#salary"><i>04</i>薪资待遇</a>
+    <a href="#grow"><i>05</i>成长体系</a>
+    <a href="#coop"><i>06</i>校企合作</a>
+    <a href="#apply"><i>07</i>应聘流程</a>
+    <a href="#contact"><i>08</i>联系我们</a>
+  </nav>
+  <div class="drawer-foot">
+    <b>15187101545</b>
+    微信：DJ-Adr　·　昆明市西山区广福美食城雅福园 SY2 栋整栋
+  </div>
+</div>
+
+<!-- ===== 首屏 ===== -->
+<main id="top">
+<section class="hero" aria-label="星秀互娱招聘">
+  <div class="hero-media"><img src="assets/space-front.jpg" alt="星秀互娱基地前台大堂与发光的品牌标识墙"></div>
+  <div class="hero-grade" aria-hidden="true"></div>
+  <div class="hero-rail" aria-hidden="true">昆明 · 西山区 · 3500 ㎡ 独栋基地</div>
+  <div class="hero-inner">
+    <p class="hero-kick"><span></span>昆明 · 西山区 · 3500 ㎡ 独栋直播基地</p>
+    <h1 class="hero-title"><span>星辰大海</span><span class="outline">秀出未来</span></h1>
+    <p class="hero-sub">星秀互娱 2026 公开招聘 · 台前幕后九个岗位</p>
+    <p class="hero-lead">直播间里没有旁观者，只有被看见的未来。我们把 3500 ㎡ 的独栋基地、真实的商业项目和一整套带教体系，交给愿意在镜头前、也愿意在镜头后认真做事的人。</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="#jobs">查看开放岗位
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="#space">走进基地</a>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt><b>3500<em>㎡</em></b><small>独栋孵化基地</small></dt></div>
+    <div><dt><b>9<em>个</em></b><small>在招岗位</small></dt></div>
+    <div><dt><b>6786<em>元</em></b><small>直播销售岗 · 本科月收入</small></dt></div>
+    <div><dt><b>97.3<em>%</em></b><small>合作院校平均就业率</small></dt></div>
+  </dl>
+</section>
+
+<!-- ===== 关于星秀 ===== -->
+<section class="sec sec--paper" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="rail"><span class="rail-line"></span><span class="rail-tag">关于星秀</span></div>
+      <div class="head-main">
+        <span class="rail-inline">关于星秀</span>
+        <h2 class="sec-title">把“被看见”<br>变作风向标</h2>
+        <p class="sec-sub">一家扎根昆明的直播传媒机构，也是一个把新人从零带到能独立开播的孵化基地。</p>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p class="drop">星秀互娱是一家以直播为核心的传媒机构，总部位于昆明市西山区，拥有 3500 平方米独栋基地。专业直播间、虚拟绿幕棚、舞蹈排练厅、化妆造型间与培训教室在同一栋楼里，台前和幕后都不必外借场地。</p>
+        <p>我们不把“当主播”当成一份靠运气的工作。账号定位、脚本、灯光、妆造、投流、复盘——每一步都有方法和人带。这也是我们把基地做成孵化器、而不是办公室的原因：进来时你是什么专业并不重要，出去时要有一个能吃饭的本事。</p>
+        <p>目前公司围绕直播产业链设置九个岗位，从台前的主播、主持，到幕后的运营、摄影、AI 创作和人事，再到配套的化妆、舞蹈，形成完整的协作闭环。学生可以按专业背景与个人兴趣，精准对接实习与就业方向。</p>
+        <dl class="about-facts">
+          <div><b>3500<em>㎡</em></b><small>独栋空间，多板块并行运转</small></div>
+          <div><b>9<em>个</em></b><small>岗位覆盖台前幕后全链条</small></div>
+          <div><b>97.3<em>%</em></b><small>合作院校平均就业率</small></div>
+        </dl>
+        <p class="addr">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-6.4 7-11a7 7 0 10-14 0c0 4.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          昆明市西山区广福美食城雅福园 SY2 栋整栋
+        </p>
+      </div>
+      <div class="about-media reveal">
+        <figure>
+          <img src="assets/office-front.jpg" alt="星秀互娱基地临街入口，门头与星形标识">
+          <figcaption>基地临街入口 · 一栋楼装下整个直播链条</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/office-lobby.jpg" alt="星秀互娱一楼大厅与休闲洽谈区">
+          <figcaption>一层大厅</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/space-lounge.jpg" alt="基地内部休闲区与洽谈卡座">
+          <figcaption>洽谈与休息区</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="leaders reveal">
+      <div class="leader">
+        <img src="assets/leader-he.jpg" alt="星秀互娱董事长 何远林">
+        <div class="leader-body">
+          <span class="leader-role">董事长</span>
+          <div class="leader-name">何远林</div>
+          <p class="leader-quote">“传媒行业，真实与诚信是立命之本。先把人和内容做真，生意才做得长。”</p>
+        </div>
+      </div>
+      <div class="leader">
+        <img src="assets/leader-li.jpg" alt="星秀互娱总经理 李希">
+        <div class="leader-body">
+          <span class="leader-role">总经理</span>
+          <div class="leader-name">李 希</div>
+          <p class="leader-quote">“设备、场地、带教都做到位，人才才愿意留下来。这是我每天在盯的事。”</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="values reveal">
+      <h4>核心价值 · 我们怎么看这份工作</h4>
+      <div class="value-row"><span class="value-k">真实与诚信</span><span class="value-v">传媒行业，真实与诚信是立命之本。</span></div>
+      <div class="value-row"><span class="value-k">创新与合作</span><span class="value-v">传媒行业变化极快，创新能让公司在竞争中被看见，也让内容和服务持续更新。</span></div>
+	  
+      <div class="value-row"><span class="value-k">敬业与服务</span><span class="value-v">员工敬业才能保证工作质量与效率；以员工为中心，把设备和办公环境做好，是对这份敬业最基本的回应。</span></div>
+      <div class="value-row"><span class="value-k">尊重与包容</span><span class="value-v">尊重每个人的观点与创意，内容才丰富，团队才不内耗。</span></div>
+      <div class="value-row"><span class="value-k">进取、奉献与感恩</span><span class="value-v">鼓励员工向上生长，也鼓励把力气花在团队和公司上；对平台与社会，保持感恩。</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 基地空间 ===== -->
+<section class="sec" id="space">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="rail"><span class="rail-line"></span><span class="rail-tag">基地空间</span></div>
+      <div class="head-main">
+        <span class="rail-inline">基地空间</span>
+        <h2 class="sec-title">3500 ㎡，<br><span class="accent">不用外借场地的直播间</span></h2>
+        <p class="sec-sub">硬件有规模，岗位有生态。这里的每一面墙、每一盏灯，都是日常开工的地方，也是新人第一次面对镜头的地方。</p>
+      </div>
+    </div>
+
+    <div class="space-top reveal">
+      <div class="big-num"><span>3500</span><em>㎡</em><small>独栋 · 昆明市西山区 · 空间独立承载多板块业务并行</small></div>
+      <ul class="zones">
+        <li class="zone"><i></i>专业级直播间</li>
+        <li class="zone"><i></i>虚拟绿幕棚</li>
+        <li class="zone"><i></i>舞蹈排练厅</li>
+        <li class="zone"><i></i>化妆造型间</li>
+        <li class="zone"><i></i>培训教室</li>
+        <li class="zone"><i></i>设备与声卡间</li>
+      </ul>
+    </div>
+
+    <div class="gallery reveal">
+      <figure class="g-hero">
+        <img src="img/ZDTBJ.jpg" alt="星秀互娱团播直播间，环形灯带与多机位布置">
+        <figcaption>团播直播间<span>直播输出</span></figcaption>
+      </figure>
+      <figure class="g-tall">
+        <img src="assets/space-makeup.jpg" alt="直播间内的化妆造型区与补光灯">
+        <figcaption>化妆造型间<span>配套</span></figcaption>
+      </figure>
+      <figure class="g-tall">
+        <img src="assets/space-device.jpg" alt="直播间的摄像机、提词器与灯光设备">
+        <figcaption>设备与灯光<span>幕后</span></figcaption>
+      </figure>
+      <figure class="g-land">
+        <img src="assets/space-class.jpg" alt="基地培训教室内的座席与投影">
+        <figcaption>舒适休息区<span>环境</span></figcaption>
+      </figure>
+      <figure class="g-land">
+        <img src="assets/hero-stage.jpg" alt="星秀互娱沉浸式舞台直播区，环形灯光装置">
+        <figcaption>内部练歌房<span>设施</span></figcaption>
+      </figure>
+      <figure class="g-wide">
+        <img src="assets/space-training.jpg" alt="开播前，后台正在进行妆造与准备">
+        <figcaption>开播前的妆造与准备<span>后台</span></figcaption>
+      </figure>
+    </div>
+
+    <figure class="pano reveal">
+      <img src="img/XZ.jpg" alt="星秀互娱基地内部走廊全景"
+	  style="width: 100%;max-width:100%;display: block;margin: 0 auto;">
+      <figcaption class="pano-cap">校企合作，共建实践</figcaption>
+    </figure>
+  </div>
+</section>
+<!-- ===== 开放岗位 ===== -->
+<section class="sec sec--ink2" id="jobs">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="rail"><span class="rail-line"></span><span class="rail-tag">开放岗位</span></div>
+      <div class="head-main">
+        <span class="rail-inline">开放岗位</span>
+        <h2 class="sec-title">九个岗位，<br><span class="accent">台前幕后都有位置</span></h2>
+        <p class="sec-sub">直播行业不是单一主播岗，而是一条多元协作的产业链。岗位的厚度，就是你选择方向的宽度——按专业背景和兴趣对号入座，不必挤同一扇门。</p>
+      </div>
+    </div>
+
+    <div class="jobs-top">
+      <div class="filters" role="group" aria-label="按岗位方向筛选">
+        <button class="chip" data-filter="all" aria-pressed="true">全部岗位<i>9</i></button>
+        <button class="chip" data-filter="live" aria-pressed="false">直播输出<i>3</i></button>
+        <button class="chip" data-filter="back" aria-pressed="false">内容与后台<i>4</i></button>
+        <button class="chip" data-filter="support" aria-pressed="false">配套赋能<i>2</i></button>
+      </div>
+      <span class="count" id="jobCount" aria-live="polite">当前显示 9 个岗位</span>
+    </div>
+
+    <div class="jobs" id="jobList">
+      <article class="job" data-group="live">
+        <div class="job-head">
+          <div><span class="job-idx">01 / 直播输出</span><h3 class="job-name">团播主播</h3></div>
+          <span class="job-tag">台前</span>
+        </div>
+        <p class="job-one">多人同屏互动直播，配合节奏完成互动、PK、才艺与话题，靠团队默契把一场直播撑住。</p>
+        <div class="job-tags"><span>专业不限</span><span>普通话清晰</span><span>接受晚班</span></div>
+        <div class="job-foot">
+          <div class="pay"><small>综合月薪参考</small><b>6,000–15,000<i>元</i></b></div>
+          <button class="job-toggle" aria-expanded="false" aria-controls="jd1">岗位详情
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="job-detail" id="jd1">
+          <div class="jd-block"><h5>工作内容</h5><ul><li>与团队同屏开播，完成互动、才艺、话题与 PK 环节</li><li>配合运营完成脚本、节奏与话术准备</li><li>维护直播间氛围与粉丝关系，参与复盘</li></ul></div>
+          <div class="jd-block"><h5>专业与要求</h5><ul><li>专业不限；播音主持、表演、音乐舞蹈、空乘、学前教育等优先</li><li>镜头表现力与临场反应，普通话清晰，无明显口音障碍</li><li>接受 17:00–23:00 时段轮班；身高形象无硬性门槛，有才艺加分</li></ul></div>
+        </div>
+      </article>
+
+      <article class="job" data-group="live">
+        <div class="job-head">
+          <div><span class="job-idx">02 / 直播输出</span><h3 class="job-name">个播主播</h3></div>
+          <span class="job-tag">台前</span>
+        </div>
+        <p class="job-one">独立账号开播，自己定内容方向与人设，把一档属于自己的节目稳定做下去。</p>
+        <div class="job-tags"><span>有内容方向</span><span>能独立控场</span><span>接受晚班</span></div>
+        <div class="job-foot">
+          <div class="pay"><small>综合月薪参考</small><b>5,000–8,000<i>元</i></b></div>
+          <button class="job-toggle" aria-expanded="false" aria-controls="jd2">岗位详情
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="job-detail" id="jd2">
+          <div class="jd-block"><h5>工作内容</h5><ul><li>独立完成单场直播的选题、开场、控场与收尾</li><li>维护账号人设与内容更新节奏，配合短视频引流</li><li>按周复盘数据，调整时段、话术与内容结构</li></ul></div>
+          <div class="jd-block"><h5>专业与要求</h5><ul><li>专业不限；有稳定内容方向（聊天、才艺、游戏、情感、知识分享均可）</li><li>能每周稳定开播 6 天以上，具备基本账号运营意识</li><li>有个人账号作品、短视频或舞台经历者优先（投递时附作品链接）</li></ul></div>
+        </div>
+      </article>
+
+      <article class="job" data-group="live">
+        <div class="job-head">
+          <div><span class="job-idx">03 / 直播输出</span><h3 class="job-name">带货主播</h3></div>
+          <span class="job-tag">台前</span>
+        </div>
+        <p class="job-one">把商品讲清楚、把节奏带起来，用话术与信任完成转化，收入与人效直接挂钩。</p>
+        <div class="job-tags"><span>口条清晰</span><span>抗压</span><span>品类熟悉</span></div>
+        <div class="job-foot">
+          <div class="pay"><small>综合月薪参考</small><b>5,000–8,000<i>元</i></b></div>
+          <button class="job-toggle" aria-expanded="false" aria-controls="jd3">岗位详情
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="job-detail" id="jd3">
+          <div class="jd-block"><h5>工作内容</h5><ul><li>按排品完成讲解、比价、憋单与逼单，控制整场节奏</li><li>参与选品与卖点提炼，配合投流调整话术</li><li>对 GMV、转化率、停留时长等核心指标负责</li></ul></div>
+          <div class="jd-block"><h5>专业与要求</h5><ul><li>专业不限；市场营销、电子商务、播音主持、汉语言等优先</li><li>口条清晰、抗压强、临场反应快；熟悉美妆、食品、服饰任一品类更好</li><li>能接受以数据为核心的考核方式，接受大促期间高强度排班</li></ul></div>
+        </div>
+      </article>
+
+
+      <article class="job" data-group="back">
+        <div class="job-head">
+          <div><span class="job-idx">04 / 内容与后台</span><h3 class="job-name">直播运营</h3></div>
+          <span class="job-tag">幕后</span>
+        </div>
+        <p class="job-one">决定一场直播“讲什么、卖给谁、怎么放大”，从策划到复盘全程负责。</p>
+        <div class="job-tags"><span>数据敏感</span><span>策划能力</span><span>会投流</span></div>
+        <div class="job-foot">
+          <div class="pay"><small>综合月薪参考</small><b>4,000–6,000<i>元</i></b></div>
+          <button class="job-toggle" aria-expanded="false" aria-controls="jd5">岗位详情
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="job-detail" id="jd4">
+          <div class="jd-block"><h5>工作内容</h5><ul><li>负责账号定位、内容规划与活动策划，输出直播脚本</li><li>配合投流与达人合作，跟进场次数据并做复盘迭代</li><li>协调主播、场控、摄影与妆造，保证一场直播的落地执行</li></ul></div>
+          <div class="jd-block"><h5>专业与要求</h5><ul><li>市场营销、电子商务、新闻传播、工商管理等专业优先</li><li>数据敏感，会用巨量千川 / 罗盘等后台工具；有账号 0 到 1 经验者优先</li><li>能写清楚方案与复盘文档，抗压、能接受晚班跟进</li></ul></div>
+        </div>
+      </article>
+
+      <article class="job" data-group="back">
+        <div class="job-head">
+          <div><span class="job-idx">05 / 内容与后台</span><h3 class="job-name">AI 创作</h3></div>
+          <span class="job-tag">幕后</span>
+        </div>
+        <p class="job-one">用 AI 工具把脚本、图文、分镜和数字人素材批量做出来，让内容产能跟上开播频率。</p>
+        <div class="job-tags"><span>会用 AI 工具</span><span>有审美</span><span>能写脚本</span></div>
+        <div class="job-foot">
+          <div class="pay"><small>综合月薪参考</small><b>4,000–6,000<i>元</i></b></div>
+          <button class="job-toggle" aria-expanded="false" aria-controls="jd6">岗位详情
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="job-detail" id="jd5">
+          <div class="jd-block"><h5>工作内容</h5><ul><li>产出直播脚本、短视频文案、图文与封面素材</li><li>用文生图 / 文生视频 / 数字人工具完成批量内容生产</li><li>建立可复用的提示词与素材库，提高团队产能</li></ul></div>
+          <div class="jd-block"><h5>专业与要求</h5><ul><li>数字媒体、广告学、广播电视编导、汉语言文学、视觉传达等优先</li><li>熟悉主流 AI 创作工具，有作品集（脚本 / 图文 / 短片）</li><li>有叙事能力和审美判断，能分辨“能看”和“好看”</li></ul></div>
+        </div>
+      </article>
+
+      <article class="job" data-group="back">
+        <div class="job-head">
+          <div><span class="job-idx">06 / 内容与后台</span><h3 class="job-name">摄影 · 摄像</h3></div>
+          <span class="job-tag">幕后</span>
+        </div>
+        <p class="job-one">机位、灯光、构图、运镜——直播间画面的质感，基本由你决定。</p>
+        <div class="job-tags"><span>懂布光</span><span>会剪辑</span><span>有作品集</span></div>
+        <div class="job-foot">
+          <div class="pay"><small>综合月薪参考</small><b>4,000–6,000<i>元</i></b></div>
+          <button class="job-toggle" aria-expanded="false" aria-controls="jd7">岗位详情
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="job-detail" id="jd6">
+          <div class="jd-block"><h5>工作内容</h5><ul><li>负责直播间机位与灯光布置，保证画面稳定与质感</li><li>拍摄主播形象照、短视频与花絮</li><li>维护设备与素材归档，配合后期完成基础剪辑</li></ul></div>
+          <div class="jd-block"><h5>专业与要求</h5><ul><li>摄影摄像、影视摄影与制作、广播电视编导等专业优先</li><li>会使用单反 / 微单与稳定器，懂基本布光与构图</li><li>会剪映或 Premiere 基础剪辑；投递请附作品集</li></ul></div>
+        </div>
+      </article>
+
+      <article class="job" data-group="back">
+        <div class="job-head">
+          <div><span class="job-idx">07 / 内容与后台</span><h3 class="job-name">直播主持</h3></div>
+          <span class="job-tag">台前</span>
+        </div>
+        <p class="job-one">大场活动、连麦、串场口播都归你，把整场直播的“场”串起来。</p>
+        <div class="job-tags"><span>普通话二甲</span><span>临场应变</span><span>文案功底</span></div>
+        <div class="job-foot">
+          <div class="pay"><small>综合月薪参考</small><b>4,000–7,000<i>元</i></b></div>
+          <button class="job-toggle" aria-expanded="false" aria-controls="jd8">岗位详情
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="job-detail" id="jd7">
+          <div class="jd-block"><h5>工作内容</h5><ul><li>主持大场活动、连麦与专场，完成开场、串场与收尾</li><li>撰写口播稿与活动台本，配合运营调整现场节奏</li><li>承担对外直播与线下活动的现场主持</li></ul></div>
+          <div class="jd-block"><h5>专业与要求</h5><ul><li>播音与主持艺术、表演、新闻传播等专业优先</li><li>普通话二级甲等及以上，声音条件与镜头状态好</li><li>有文案功底与临场应变能力；有主持作品或活动经历者优先</li></ul></div>
+        </div>
+      </article>
+
+
+      <article class="job" data-group="support">
+        <div class="job-head">
+          <div><span class="job-idx">08 / 配套赋能</span><h3 class="job-name">化妆造型师</h3></div>
+          <span class="job-tag">配套</span>
+        </div>
+        <p class="job-one">镜头妆、发型、服装搭配——主播上镜的第一层“信任感”，是你给的。</p>
+        <div class="job-tags"><span>镜头妆</span><span>快速改妆</span><span>带作品集</span></div>
+        <div class="job-foot">
+          <div class="pay"><small>综合月薪参考</small><b>4,000–5,000<i>元</i></b></div>
+          <button class="job-toggle" aria-expanded="false" aria-controls="jd10">岗位详情
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="job-detail" id="jd8">
+          <div class="jd-block"><h5>工作内容</h5><ul><li>负责主播日常妆造、镜头妆与发型设计</li><li>配合直播主题与专场完成造型方案与服装搭配</li><li>维护化妆间物料与工具，管理妆造档期</li></ul></div>
+          <div class="jd-block"><h5>专业与要求</h5><ul><li>人物形象设计、化妆造型、美容美体等专业优先</li><li>有影楼、剧组或直播妆造经验均可，会镜头妆与快速改妆</li><li>审美在线、沟通耐心；投递请附妆造作品集</li></ul></div>
+        </div>
+      </article>
+
+      <article class="job" data-group="support">
+        <div class="job-head">
+          <div><span class="job-idx">09 / 配套赋能</span><h3 class="job-name">舞蹈老师</h3></div>
+          <span class="job-tag">配套</span>
+        </div>
+        <p class="job-one">形体、开场舞、团播编排，让镜头里的动作好看，也让新人不再手脚僵硬。</p>
+        <div class="job-tags"><span>舞蹈专业</span><span>能编舞</span><span>晚间排练</span></div>
+        <div class="job-foot">
+          <div class="pay"><small>综合月薪参考</small><b>5,000–6,000<i>元</i></b></div>
+          <button class="job-toggle" aria-expanded="false" aria-controls="jd11">岗位详情
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="job-detail" id="jd09">
+          <div class="jd-block"><h5>工作内容</h5><ul><li>为新人和在职主播上形体课、节奏课与镜头动作课</li><li>编排团播开场舞、专场表演与短视频舞蹈内容</li><li>配合运营完成舞台走位与排练计划</li></ul></div>
+          <div class="jd-block"><h5>专业与要求</h5><ul><li>舞蹈表演、舞蹈编导、舞蹈教育等专业</li><li>能独立编 15–30 秒团播开场，中国舞、流行舞、爵士均可</li><li>有教学耐心，接受晚间排练与专场跟场</li></ul></div>
+        </div>
+      </article>
+    </div>
+
+    <p class="jobs-note">薪资为岗位综合月薪参考带宽（底薪 + 绩效 / 提成 / 场次补贴），具体以面试定级与当期绩效方案为准；主播岗收入与场次数据强相关，上限不封顶。</p>
+
+    <!-- 岗位匹配 -->
+    <div class="matcher reveal" id="matcher">
+      <h4>30 秒，看看你适合站哪一侧</h4>
+      <p class="m-sub">选三个答案，我们按岗位特征给你一个方向参考。结果只是参考，面试时可以改主意。</p>
+
+      <div class="m-q" data-q="1">
+        <p><b>01</b>你更想站在哪一侧？</p>
+        <div class="m-opts">
+          <button class="m-opt" data-tag="front">镜头里，台前</button>
+          <button class="m-opt" data-tag="back">画面外，幕后</button>
+        </div>
+      </div>
+
+      <div class="m-q" data-q="2">
+        <p><b>02</b>你最拿得出手的是？</p>
+        <div class="m-opts">
+          <button class="m-opt" data-tag="express">敢说敢演，不怕镜头</button>
+          <button class="m-opt" data-tag="plan">爱策划，看数据</button>
+          <button class="m-opt" data-tag="aesthetic">对画面和审美挑剔</button>
+          <button class="m-opt" data-tag="tech">喜欢研究工具与技术</button>
+        </div>
+      </div>
+
+      <div class="m-q" data-q="3">
+        <p><b>03</b>晚间直播时段（17:00–23:00）你能接受吗？</p>
+        <div class="m-opts">
+          <button class="m-opt" data-tag="night-ok">可以，作息能调</button>
+          <button class="m-opt" data-tag="day-only">更希望白班</button>
+        </div>
+      </div>
+
+      <div class="m-result" id="mResult">
+        <span class="m-tier">推荐方向</span>
+        <div class="m-names" id="mNames"></div>
+        <p class="m-note" id="mNote"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 与云南省广播电视台合作 ===== -->
+<section class="sec" id="salary">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="rail"><span class="rail-line"></span><span class="rail-tag">云媒联创</span></div>
+      <div class="head-main">
+        <span class="rail-inline">云媒联创</span>
+        <h2 class="sec-title">官方媒体资源联动，<br><span class="accent">与云南广播电视台合作</span></h2>
+        <p class="sec-sub">内容共创|品牌传播|> 媒体资源对接 > 内容联合传播 > 品牌公信力提升；官方合作，依托云南广播电视台视听生态，开展品牌宣传与内容合作。</p>
+      </div>
+    </div>
+	
+	
+
+<!-- ===== 薪资待遇 ===== -->
+<section class="sec" id="salary">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="rail"><span class="rail-line"></span><span class="rail-tag">薪资待遇</span></div>
+      <div class="head-main">
+        <span class="rail-inline">薪资待遇</span>
+        <h2 class="sec-title">薪资有竞争力，<br><span class="accent">门槛对跨专业友善</span></h2>
+        <p class="sec-sub">直播行业的薪资不靠熬年头，靠场次和结果。对专业背景的限制也远比传统岗位宽松——工作与专业相关度只有 45%，远低于全国平均的 73%。</p>
+      </div>
+    </div>
+
+    <div class="pay-grid">
+      <div class="reveal">
+        <div class="pay-lead">6786<em>元</em></div>
+        <p class="pay-cap">直播销售岗 · <b>本科生月起薪</b>　　高职生为 5695 元，均高于全国平均水平</p>
+
+        <div class="bars">
+          <div class="bar-row is-hot">
+            <span class="bl">直播销售岗 · 本科</span>
+            <span class="bv">6,786 元</span>
+            <span class="bt"><i style="--w:100%"></i></span>
+          </div>
+          <div class="bar-row is-dim">
+            <span class="bl">互联网零售业 · 本科</span>
+            <span class="bv">6,374 元</span>
+            <span class="bt"><i style="--w:93.9%"></i></span>
+          </div>
+          <div class="bar-row is-dim">
+            <span class="bl">直播销售岗 · 高职</span>
+            <span class="bv">5,695 元</span>
+            <span class="bt"><i style="--w:83.9%"></i></span>
+          </div>
+        </div>
+        <p class="jobs-note" style="margin-top:22px">数据引自星秀互娱校企合作提案：互联网零售业本科毕业生月收入 6374 元，较 2022 届上涨 374 元。</p>
+      </div>
+
+      <div class="reveal">
+        <div class="pay-side">
+          <div><b>77<em>%</em></b><small>从业者就业满意度，较 2022 届提升 4 个百分点</small></div>
+          <div><b>45<em>%</em></b><small>工作与专业相关度，跨专业进入门槛低</small></div>
+          <div><b>3.36<em>个</em></b><small>每新增 1 个直播岗位，带动衍生就业岗位</small></div>
+          <div><b>45<em>%+</em></b><small>团播、主播等岗位需求年增速</small></div>
+        </div>
+        <div class="pay-nums">
+          <div><b>7000<em>万</em></b><small>直播从业人数规模</small></div>
+          <div><b>1500<em>万</em></b><small>行业仍存人才缺口</small></div>
+          <div><b>4500<em>万</em></b><small>人社部预测数字化人才缺口</small></div>
+        </div>
+        <p class="jobs-note" style="margin-top:22px">我们给的薪资结构：保底 + 场次 / 项目绩效 + 提成或补贴。每月结算，明细透明；晋升评审每季度一次。</p>
+      </div>
+    </div>
+
+    <div class="tbl-wrap reveal">
+      <table class="salary-tbl">
+        <colgroup><col><col><col></colgroup>
+        <thead>
+          <tr><th scope="col">岗位</th><th scope="col">参考月薪</th><th scope="col">薪资结构</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>团播主播</td><td>6,000–15,000<span> 元</span></td><td>保底 + 时长绩效 + 礼物分成</td></tr>
+          <tr><td>个播主播</td><td>5,000–8,000<span> 元</span></td><td>保底 + 人气绩效 + 礼物分成</td></tr>
+          <tr><td>带货主播</td><td>5,000–8,000<span> 元</span></td><td>保底 + GMV 提成 + 专场奖励</td></tr>
+    
+          <tr><td>直播运营</td><td>4,000–6,000<span> 元</span></td><td>保底 + 项目绩效 + 年终</td></tr>
+          <tr><td>AI 创作</td><td>4,000–6,000<span> 元</span></td><td>保底 + 产能绩效</td></tr>
+          <tr><td>摄影 · 摄像</td><td>4,000–6,000<span> 元</span></td><td>保底 + 项目 / 场次补贴</td></tr>
+          <tr><td>直播主持</td><td>4,000–7,000<span> 元</span></td><td>保底 + 场次补贴</td></tr>
+          
+          <tr><td>化妆造型师</td><td>4,000–5,000<span> 元</span></td><td>保底 + 妆造场次补贴</td></tr>
+          <tr><td>舞蹈老师</td><td>5,000–6,000<span> 元</span></td><td>保底 + 课时费</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 成长体系 ===== -->
+<section class="sec sec--paper" id="grow">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="rail"><span class="rail-line"></span><span class="rail-tag">成长体系</span></div>
+      <div class="head-main">
+        <span class="rail-inline">成长体系</span>
+        <h2 class="sec-title">从新人到台柱，<br>四步走完第一年</h2>
+        <p class="sec-sub">零经验不是问题，没人带才是问题。新人进来的前六个月，节奏是这样安排的——每一步都有明确的产出和评估标准。</p>
+      </div>
+    </div>
+
+    <div class="growth-grid">
+      <div class="tl reveal">
+        <div class="tl-row">
+          <div class="tl-when">第 1–2 周</div>
+          <div class="tl-axis"><span class="tl-dot"></span></div>
+          <div class="tl-body">
+            <span class="tl-when-m">第 1–2 周</span>
+            <h5>入职集训</h5>
+            <p>行业认知、平台规则、镜头表达、妆造与形体五门基础课，白天上课、晚上进直播间看场，先看懂一场直播怎么跑起来。</p>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-when">第 3–6 周</div>
+          <div class="tl-axis"><span class="tl-dot"></span></div>
+          <div class="tl-body">
+            <span class="tl-when-m">第 3–6 周</span>
+            <h5>跟播实战</h5>
+            <p>进入导师的场次做助播、场控或跟拍，拆解脚本与话术。这个阶段的目标不是出镜，而是把节奏、流程和后台操作练熟。</p>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-when">第 2–3 个月</div>
+          <div class="tl-axis"><span class="tl-dot"></span></div>
+          <div class="tl-body">
+            <span class="tl-when-m">第 2–3 个月</span>
+            <h5>独立开播 / 独立项目</h5>
+            <p>接手自己的账号或项目，开始对场次数据负责。导师退到镜头外，只在复盘时给意见——这一步过了，才算真正入行。</p>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-when">第 6 个月起</div>
+          <div class="tl-axis"><span class="tl-dot"></span></div>
+          <div class="tl-body">
+            <span class="tl-when-m">第 6 个月起</span>
+            <h5>晋升评审</h5>
+            <p>按数据、稳定性和协作评价做定级，每季度一次。新人 → 主力 → 台柱 / 项目负责人，路径是公开的。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="tracks">
+          <div class="track"><b>主播线</b><span>新人主播 → 主力主播 → 台柱主播 → 主播经纪</span></div>
+          <div class="track"><b>内容线</b><span>摄影助理 → 摄像师 → 内容主管 → 内容总监</span></div>
+          <div class="track"><b>职能线</b><span>专员 → 主管 → 经理 → 基地负责人</span></div>
+        </div>
+
+        <div class="perks">
+          <h4>在这里工作，你会得到</h4>
+          <div class="perk-grid">
+            <div class="perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20l6-2 8-8 2-6-6 2-8 8-2 6"/><path d="M14 6l4 4"/></svg>
+              <b>免费妆造</b><small>上岗妆造与服装由造型团队支持</small>
+            </div>
+            <div class="perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="13"/><circle cx="12" cy="12.5" r="3.2"/><path d="M9 6l1.5-2.5h5L17 6"/></svg>
+              <b>设备与场地</b><small>直播间、灯光、声卡、拍摄器材免费用</small>
+            </div>
+            <div class="perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+              <b>导师带教</b><small>1 对 1 导师，30 天跟播计划</small>
+            </div>
+            <div class="perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 4l9 4-9 4-9-4 9-4z"/><path d="M6 10v5c0 2 3 3.5 6 3.5s6-1.5 6-3.5v-5"/></svg>
+              <b>带薪培训</b><small>入职集训两周，课程与排练计入工时</small>
+            </div>
+            <div class="perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 17l4-6 3 3 4-8 4 5 3-3 1 4"/><path d="M3 21h18"/></svg>
+              <b>流量扶持</b><small>新账号冷启动资源位与投流支持</small>
+            </div>
+            <div class="perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 5a10 10 0 11-14 14"/><path d="M20 3v4h-4"/><circle cx="12" cy="12" r="3"/></svg>
+              <b>夜班保障</b><small>晚班打车报销，夜宵与休息区常备</small>
+            </div>
+            <div class="perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l2.6 5.8 6.4.7-4.8 4.3 1.3 6.3L12 17.5 7.5 20l1.3-6.3L4 9.5l6.4-.7z"/></svg>
+              <b>成长激励</b><small>月度新星榜、季度晋升评审、专项奖金</small>
+            </div>
+            <div class="perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 11a3 3 0 100-6 3 3 0 000 6zM16 11a3 3 0 100-6 3 3 0 000 6z"/><path d="M2 20c0-3 2.7-5 6-5s6 2 6 5"/><path d="M14 15c3 0 6 2 6 5"/></svg>
+              <b>团队氛围</b><small>团建、生日会、节日福利，不搞虚的</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 校企合作 ===== -->
+<section class="sec sec--paper2" id="coop">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="rail"><span class="rail-line"></span><span class="rail-tag">校企合作</span></div>
+      <div class="head-main">
+        <span class="rail-inline">校企合作</span>
+        <h2 class="sec-title">对学校，<br>我们不只是来招人的</h2>
+        <p class="sec-sub">六种合作模式经过多地院校验证，可直接复制落地。从挂牌共建到订单班定向输送，校企双向赋能，破解就业对口率低与人才荒的双重难题。</p>
+      </div>
+    </div>
+
+    <div class="coop-grid">
+      <div class="reveal">
+        <div class="modes">
+          <div class="mode"><b>校中企</b><small>企业进校设直播间，教学与运营无缝对接</small></div>
+          <div class="mode"><b>订单班</b><small>企业参与课程设计，毕业即可直接入企</small></div>
+          <div class="mode"><b>项目驱动</b><small>真实品牌项目进课堂，学生全流程实战</small></div>
+          <div class="mode"><b>双师型</b><small>企业实战导师与校内教师混编授课</small></div>
+          <div class="mode"><b>培训及上岗</b><small>企业承担培训，学生结业即可上岗就业</small></div>
+          <div class="mode"><b>工坊制</b><small>学生分组参与真实商业项目，边做边学</small></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="coop-steps">
+          <div class="coop-step"><i>1</i><div><b>签约共建</b><small>挂牌校企合作基地，明确权责与合作框架</small></div></div>
+          <div class="coop-step"><i>2</i><div><b>实战培养</b><small>企业导师进课堂，学生进直播间，真实项目驱动教学</small></div></div>
+          <div class="coop-step"><i>3</i><div><b>就业转化</b><small>订单班定向输送，优秀学员优先入职，打通毕业即就业通道</small></div></div>
+        </div>
+        <div class="coop-stats">
+          <div><b>97.3<em>%</em></b><small>头部产教融合院校平均就业率，超全省专科平均 5.6 个百分点</small></div>
+          <div><b>98<em>%</em></b><small>引入企业实战项目后，学生就业率提升幅度（深圳技术大学案例）</small></div>
+          <div><b>95<em>%+</em></b><small>电商专业就业率持续保持（广西国际商务职院案例）</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 应聘流程 ===== -->
+<section class="sec" id="apply">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="rail"><span class="rail-line"></span><span class="rail-tag">应聘流程</span></div>
+      <div class="head-main">
+        <span class="rail-inline">应聘流程</span>
+        <h2 class="sec-title">五步，从投递到上岗</h2>
+        <p class="sec-sub">不需要先辞职再考虑。初聊和试岗都可以安排在你方便的时间，试岗期间按天结算补贴。</p>
+      </div>
+    </div>
+    <div class="flow reveal">
+      <div class="flow-step"><i>STEP 01</i><b>投递</b><small>微信或电话联系，发简历 / 作品集（岗位不同要求不同）</small></div>
+      <div class="flow-step"><i>STEP 02</i><b>线上初聊</b><small>15 分钟，聊方向、时段与期望，不合适会直说</small></div>
+      <div class="flow-step"><i>STEP 03</i><b>到基地试镜 / 试岗</b><small>主播岗试镜，幕后岗跟场半天，看真实工作状态</small></div>
+      <div class="flow-step"><i>STEP 04</i><b>定级与培训</b><small>按能力定级定薪，进入集训与导师带教</small></div>
+      <div class="flow-step"><i>STEP 05</i><b>入职上岗</b><small>办理入职，进入排班与场次计划</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 联系 ===== -->
+<section class="contact" id="contact">
+  <div class="contact-bg" aria-hidden="true"><img src="assets/team.jpg" alt=""></div>
+  <div class="wrap contact-inner">
+    <div class="reveal">
+      <h2 class="contact-title"><span>让每个学生</span><span class="thin">都能被看见</span></h2>
+      <p class="contact-lead">直播间里没有旁观者，只有被看见的未来。如果你想在昆明找一份和镜头有关的工作，先来基地看一圈，再决定要不要留下。</p>
+      <div class="contact-rows">
+        <div class="c-row">
+          <span class="c-k">电话</span>
+          <span class="c-v">151 8710 1545</span>
+          <button type="button" class="copy" data-copy="15187101545">复制号码</button>
+          <a class="c-v" href="tel:15187101545" style="font-size:13px;border-bottom:1px solid var(--line-d);padding-bottom:1px">直接拨打</a>
+        </div>
+        <div class="c-row">
+          <span class="c-k">微信</span>
+          <span class="c-v">DJ-Adr</span>
+          <button type="button" class="copy" data-copy="DJ-Adr">复制微信号</button>
+        </div>
+        <div class="c-row">
+          <span class="c-k">地址</span>
+          <span class="c-v" style="font-size:15px;line-height:1.8">昆明市西山区广福美食城<br>雅福园 SY2 栋整栋</span>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="qr-card">
+        <img src="assets/qr-wechat.jpg" alt="星秀互娱招聘微信二维码">
+        <p>扫码添加，备注「应聘 + 岗位」</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img src="img/XSlogo.png" alt="星秀互娱"
+        class="logo-png"
+        style="width: 100px;">
+        <div>
+          <b>@星秀互娱&版权专属</b>
+          <small>XINGXIU MEDIA · KUNMING</small>
+        </div>
+      </div>
+      <div class="foot-links">
+        <a href="#about">关于星秀</a>
+        <a href="#space">基地空间</a>
+        <a href="#jobs">开放岗位</a>
+        <a href="#salary">薪资待遇</a>
+        <a href="#grow">成长体系</a>
+        <a href="#coop">校企合作</a>
+        <a href="#apply">应聘流程</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 星秀互娱 · 昆明市西山区广福美食城雅福园 SY2 栋整栋</span>
+	  <span>侵权必究</span>
+      <span class="foot-note">页面内薪资为岗位参考区间与行业公开数据，最终以面试定级与协议为准；岗位职责与培养体系以公司当期制度为准。</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- 导航：滚动状态 + 当前章节 ---------- */
+  var nav = document.getElementById("nav");
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll("#navLinks a"));
+  var sections = navLinks.map(function (a) {
+    return document.querySelector(a.getAttribute("href"));
+  }).filter(Boolean);
+
+  function onScroll() {
+    var y = window.scrollY || window.pageYOffset;
+    nav.classList.toggle("is-solid", y > 40);
+    var cur = null;
+    sections.forEach(function (s) {
+      if (s.getBoundingClientRect().top <= 140) cur = "#" + s.id;
+    });
+    navLinks.forEach(function (a) {
+      a.classList.toggle("is-active", a.getAttribute("href") === cur);
+    });
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- 移动端菜单 ---------- */
+  var drawer = document.getElementById("drawer");
+  var menuBtn = document.getElementById("menuBtn");
+  var drawerClose = document.getElementById("drawerClose");
+
+  function setDrawer(open) {
+    drawer.classList.toggle("is-open", open);
+    drawer.setAttribute("aria-hidden", open ? "false" : "true");
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.style.overflow = open ? "hidden" : "";
+    if (open) drawerClose.focus();
+  }
+  menuBtn.addEventListener("click", function () { setDrawer(true); });
+  drawerClose.addEventListener("click", function () { setDrawer(false); menuBtn.focus(); });
+  Array.prototype.forEach.call(drawer.querySelectorAll("nav a"), function (a) {
+    a.addEventListener("click", function () { setDrawer(false); });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && drawer.classList.contains("is-open")) { setDrawer(false); menuBtn.focus(); }
+  });
+
+  /* ---------- 岗位筛选 ---------- */
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
+  var jobs = Array.prototype.slice.call(document.querySelectorAll("#jobList .job"));
+  var jobCount = document.getElementById("jobCount");
+
+  function filterJobs(group) {
+    var shown = 0;
+    jobs.forEach(function (job) {
+      var hit = group === "all" || job.getAttribute("data-group") === group;
+      job.classList.toggle("is-hide", !hit);
+      if (hit) shown++;
+    });
+    jobCount.textContent = "当前显示 " + shown + " 个岗位";
+    chips.forEach(function (c) {
+      c.setAttribute("aria-pressed", c.getAttribute("data-filter") === group ? "true" : "false");
+    });
+  }
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () { filterJobs(c.getAttribute("data-filter")); });
+  });
+
+  /* ---------- 岗位详情展开 ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll(".job-toggle"), function (btn) {
+    btn.addEventListener("click", function () {
+      var detail = document.getElementById(btn.getAttribute("aria-controls"));
+      var open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", open ? "false" : "true");
+      detail.classList.toggle("is-open", !open);
+      btn.firstChild.textContent = open ? "岗位详情" : "收起详情";
+    });
+  });
+
+  /* ---------- 复制 ---------- */
+  var toast = document.getElementById("toast");
+  var toastTimer;
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add("is-on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toast.classList.remove("is-on"); }, 2200);
+  }
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        showToast("已复制：" + text);
+      }).catch(function () { legacyCopy(text); });
+    } else {
+      legacyCopy(text);
+    }
+  }
+  function legacyCopy(text) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.top = "-1000px";
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    showToast(ok ? "已复制：" + text : "复制失败，请手动记下：" + text);
+  }
+  Array.prototype.forEach.call(document.querySelectorAll(".copy"), function (b) {
+    b.addEventListener("click", function () { copyText(b.getAttribute("data-copy")); });
+  });
+
+  /* ---------- 岗位匹配 ---------- */
+  var ROLES = [
+    { n: "团播主播", tags: ["front", "express", "night"] },
+    { n: "个播主播", tags: ["front", "express", "night"] },
+    { n: "带货主播", tags: ["front", "express", "plan", "night"] },
+    { n: "场控 · 中控", tags: ["back", "plan", "tech", "night"] },
+    { n: "直播运营", tags: ["back", "plan"] },
+    { n: "AI 创作", tags: ["back", "tech", "aesthetic"] },
+    { n: "摄影 · 摄像", tags: ["back", "aesthetic", "tech"] },
+    { n: "直播主持", tags: ["front", "express", "aesthetic"] },
+    { n: "人事 · 招聘", tags: ["back", "plan"] },
+    { n: "化妆造型师", tags: ["back", "aesthetic", "night"] },
+    { n: "舞蹈老师", tags: ["back", "aesthetic", "night"] }
+  ];
+  var answers = {};
+  var mQ = Array.prototype.slice.call(document.querySelectorAll(".m-q"));
+  var mResult = document.getElementById("mResult");
+  var mNames = document.getElementById("mNames");
+  var mNote = document.getElementById("mNote");
+
+  mQ.forEach(function (q) {
+    Array.prototype.forEach.call(q.querySelectorAll(".m-opt"), function (opt) {
+      opt.addEventListener("click", function () {
+        Array.prototype.forEach.call(q.querySelectorAll(".m-opt"), function (o) {
+          o.setAttribute("aria-pressed", "false");
+        });
+        opt.setAttribute("aria-pressed", "true");
+        answers[q.getAttribute("data-q")] = opt.getAttribute("data-tag");
+        renderMatch();
+      });
+    });
+  });
+
+  function renderMatch() {
+    var have = Object.keys(answers).length;
+    if (have < 3) {
+      mResult.classList.remove("is-on");
+      return;
+    }
+    var scored = ROLES.map(function (r) {
+      var s = 0;
+      ["front", "back", "express", "plan", "aesthetic", "tech"].forEach(function (k) {
+        if (answers["1"] === k || answers["2"] === k) { if (r.tags.indexOf(k) > -1) s += 2; }
+      });
+      if (answers["3"] === "night-ok") { if (r.tags.indexOf("night") > -1) s += 2; }
+      else if (r.tags.indexOf("night") > -1) { s -= 3; } else { s += 1; }
+      return { n: r.n, s: s };
+    }).sort(function (a, b) { return b.s - a.s; });
+
+    var top = scored.slice(0, 2);
+    mNames.innerHTML = "";
+    top.forEach(function (r) {
+      var el = document.createElement("span");
+      el.style.cssText = "display:inline-flex;align-items:baseline;gap:8px;padding:10px 16px;background:rgba(199,154,79,.12);border:1px solid rgba(199,154,79,.34);font-family:var(--serif);font-weight:700;font-size:17px;color:#F6EEDF";
+      el.appendChild(document.createTextNode(r.n));
+      var em = document.createElement("em");
+      em.style.cssText = "font-style:normal;font-family:var(--sans);font-size:11px;color:#E6C68A;font-variant-numeric:tabular-nums";
+      em.textContent = Math.min(100, Math.max(20, Math.round(r.s / 6 * 100)) + "% 匹配");
+      el.appendChild(em);
+      mNames.appendChild(el);
+    });
+    mNote.textContent = answers["3"] === "day-only"
+      ? "你勾了希望白班：后台与内容岗大多为白班，主播岗和妆造、舞蹈需要跟晚场。岗位顺序可按兴趣再调整，面试时说明即可。"
+      : "匹配基于岗位特征标签，不代表录用结论。带着作品或一段自我介绍来找我们，判断会更准。";
+    mResult.classList.add("is-on");
+  }
+
+  /* ---------- 滚动揭示（仅标题与图组，一次） ---------- */
+  var reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -12% 0px", threshold: 0.12 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("is-in"); });
+  }
+})();
+</script>
+</body>
+</html>
